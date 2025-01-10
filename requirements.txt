@@ -3,5 +3,3 @@ pandas==1.5.3
 scikit-learn==1.3.0
 nltk==3.7
 streamlit==1.19.0
-matplotlib
-seaborn
