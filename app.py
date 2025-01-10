@@ -1,17 +1,20 @@
 import streamlit as st
 import pickle
 import re
-import nltk
+import nltk  # Ensure nltk is imported
+
+# Optional: You can specify the NLTK data path if you're using local data
+# nltk.data.path.append('nltk_data')
+
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-
-nltk.data.path.append('nltk_data')
-#nltk.download('stopwords')
-#nltk.download('wordnet')
-#nltk.download('punkt')
-#nltk.download('omw-1.4')
-
 from nltk.tokenize import word_tokenize
+
+# Download NLTK data if not already present (these lines can be commented out in deployment)
+# nltk.download('stopwords')
+# nltk.download('wordnet')
+# nltk.download('punkt')
+# nltk.download('omw-1.4')
 
 with open('spam_classifier_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
