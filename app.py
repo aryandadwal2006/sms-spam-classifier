@@ -27,7 +27,7 @@ with open('tfidf_vectorizer.pkl', 'rb') as vec_file:
 
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
-
+tokenizer = TreebankWordTokenizer()
 def preprocess_text(text):
     text = text.lower()
     text = re.sub(r'\S+@\S+', '', text)
