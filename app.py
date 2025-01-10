@@ -1,8 +1,8 @@
 import streamlit as st
 import pickle
 import re
-import nltk  # Ensure nltk is imported
-
+import nltk
+nltk.download('stopwords')
 # Optional: You can specify the NLTK data path if you're using local data
 # nltk.data.path.append('nltk_data')
 
