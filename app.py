@@ -3,6 +3,7 @@ import pickle
 import re
 import nltk
 nltk.download('stopwords')
+from nltk.tokenize import TreebankWordTokenizer
 # Optional: You can specify the NLTK data path if you're using local data
 # nltk.data.path.append('nltk_data')
 
@@ -31,7 +32,7 @@ def preprocess_text(text):
     text = re.sub(r'http\S+', '', text)
     text = re.sub(r'[^a-zA-Z]', ' ', text)
     text = re.sub(r'\b\w{1,2}\b', '', text)
-    tokens = word_tokenize(text)
+    tokens = tokenizer.tokenize(text)
     tokens = [lemmatizer.lemmatize(word) for word in tokens if word not in stop_words]
     cleaned_text = ' '.join(tokens)
     return cleaned_text
