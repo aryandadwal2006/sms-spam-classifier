@@ -4,6 +4,8 @@ import re
 import nltk
 nltk.download('stopwords')
 from nltk.tokenize import TreebankWordTokenizer
+nltk.download('wordnet')
+nltk.download('stopwords')
 # Optional: You can specify the NLTK data path if you're using local data
 # nltk.data.path.append('nltk_data')
 
